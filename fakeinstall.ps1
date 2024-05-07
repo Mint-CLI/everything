@@ -1,0 +1,1 @@
+Write-Host "Mint-CLI Installed Succesfully! (Not really)" -ForegroundColor green
