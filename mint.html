@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mint</title>
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Mint-CLI/assets/main/favicon.ico">
+  <style>
+    /* Dark theme with green accents */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2d3436; /* Dark background */
+      color: #fff; /* White text for readability */
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px; /* Reduced padding for closer elements */
+      background-color: #1f272a; /* Slightly darker background for navbar */
+      border-radius: 5px; /* Rounded corners for navbar */
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none; /* Remove underline from links */
+      padding: 8px 12px; /* Increased padding for better visibility */
+      border-radius: 5px; /* Rounded corners for navigation links */
+    }
+    .nav-link:hover {
+      background-color: #008000; /* Green hover effect */
+      color: #fff;
+    }
+    .hero {
+      padding: 20px; /* Reduced padding for closer elements */
+      text-align: center;
+    }
+    .hero img {
+      width: 200px; /* Adjust width as needed */
+      margin: 0 auto; /* Center logo horizontally */
+      margin-bottom: 10px; /* Reduced margin for closer elements */
+      border-radius: 50%; /* Rounded corners for logo image */
+    }
+    .hero h1 {
+      font-size: 2.5em; /* Reduced font size for better visual fit */
+      margin-bottom: 5px; /* Reduced margin for closer elements */
+      color: #00c853; /* Green heading */
+    }
+    .quick {
+      font-size: 2.5em; /* Reduced font size for better visual fit */
+      margin-bottom: 5px; /* Reduced margin for closer elements */
+      color: #00c853; /* Green heading */
+    }
+    .hero p {
+      color: #d3d3d3; /* Light gray text for description */
+      margin: 5px 0; /* Reduced margin for closer elements */
+    }
+    .disclaimer {
+      font-size: 0.8em;
+      margin-top: 10px; /* Reduced margin for closer elements */
+      color: #ccc; /* Lighter gray for disclaimer */
+      text-align: center; /* Center the disclaimer text */
+      border-radius: 5px; /* Rounded corners for disclaimer text */
+    }
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Reduced margin for closer elements */
+    }
+    .copy-btn {
+      padding: 8px 15px; /* Reduced padding for closer elements */
+      border: none;
+      border-radius: 10px; /* More rounded corners for button */
+      margin: 5px; /* Reduced margin for closer elements */
+      background-color: #008000; /* Darker green button */
+      color: #fff; /* White button text */
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <a href="#" class="nav-link">Home</a>  <a href="#" class="nav-link">Installation</a>
+      <a href="#" class="nav-link">Commands</a>
+      <a href="#" class="nav-link">About Us</a>
+    </nav>
+    <div class="hero">
+      <img src="https://github.com/Mint-CLI/assets/blob/main/mint_nobg_crop.png?raw=true" alt="Mint Logo">
+      <h1>Mint</h1>
+      <p>Keep your packages Minty fresh!</p>
+      <h1>               </h1>
+      <h2 class="quick">Quickstart</h2>
+      <pre style="color: rgb(57, 58, 52); display: flex; justify-content: left; Consolas, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, Courier, monospace; direction: ltr; text-align: left; word-spacing: normal; word-break: normal; font-size: 0.9em; line-height: 1.4; tab-size: 3; hyphens: none; padding: 0.5em; margin: 3px; margin-left: 1370px; margin-right: 1350px; overflow: auto; border: 1px solid rgb(221, 221, 221); background-color: white;"><code style="line-height: 1.9; font-size: 0.9em; margin: 0px;"><span class="token" style="color: rgb(154, 5, 15); font-weight: bold;">Set-ExecutionPolicy</span><span></span><span class="token" style="color: rgb(57, 58, 52);">-</span><span>ExecutionPolicy RemoteSigned </span><span class="token" style="color: rgb(57, 58, 52);">-</span><span>Scope CurrentUser
+      <span class="token" style="color: rgb(154, 5, 15); font-weight: bold;">Invoke-RestMethod</span><span> </span><span class="token" style="color: rgb(57, 58, 52);">-</span><span>Uri http:</span><span class="token" style="color: rgb(57, 58, 52);">/</span><span class="token" style="color: rgb(57, 58, 52);">/</span><span>mint.rf.gd</span><span class="token" style="color: rgb(57, 58, 52);"></span><span>/</span><span class="token" style="color: rgb(57, 58, 52);"></span><span>install.txt </span><span class="token" style="color: rgb(57, 58, 52);">|</span><span> </span><span class="token" style="color: rgb(154, 5, 15); font-weight: bold;">Invoke-Expression</span></code></pre>
+      <button class="copy-btn" onclick="copyText()">Copy</button>
+      <div class="disclaimer">
+        <p>This is a beta version of Mint. So it is unstable.</p>
+      <p>Mint is an installer for your favoutite packages. Some of it's perks are:</p>
+      <ul>
+        <li>Easy to use</li>
+        <li>Avoids admin prompts</li>
+        <li>Free</li>
+      </ul>
+
+    </div>
+  </header>
+
+  <script>
+    function copyText() {
+       navigator.clipboard.writeText("Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser \n Invoke-RestMethod -Uri http://mint.rf.gd/install.txt | Invoke-Expression #Press enter to start!");
+       alert("Copied! Paste this in a powershell terminal (5.1 or later) at PS C:\> .")
+        /* Copy text into clipboard */
+    }
+
+  </script>
